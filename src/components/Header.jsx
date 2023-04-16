@@ -11,12 +11,16 @@ const Header = () => {
   }
   return (
     <div className="">
-      <div className="navbar justify-between bg-neutral text-neutral-content rounded">
+      <div className="navbar  bg-blue-500 text-neutral-content rounded">
         <a className="btn btn-ghost normal-case text-xl">fireBaseTailwind</a>
         <div>
           <Link className="btn btn-ghost normal-case text-xl" to="/">
             Home
           </Link>
+          {user &&  <Link className="btn btn-ghost normal-case text-xl" to="/profile">
+            Profile
+          </Link>}
+
           <Link className="btn btn-ghost normal-case text-xl" to="/orders">
             orders
           </Link>
@@ -36,12 +40,12 @@ const Header = () => {
                 {user.email}
               </Link>
 
-            <button onClick={handleLogOut} className="btn btn-xs">Sign Out</button>
+            <button onClick={handleLogOut} className="btn btn-primary">Sign Out</button>
 
 
             </>
           ) : (
-              <Link to="/login">sign in </Link>
+              <Link className="btn btn-primary" to="/login">sign in </Link>
           )}
         </div>
       </div>

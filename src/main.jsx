@@ -9,6 +9,7 @@ import Main from "./Layouts/Main";
 import AuthProviders from "./components/AuthProviders";
 import Orders from "./components/Orders";
 import PrivateRoute from "./components/PrivateRoute";
+import Profile from "./components/Profile";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         path:"orders",
         element:<PrivateRoute><Orders></Orders></PrivateRoute>
 
+      },
+      {
+        path:"profile",
+        element:<PrivateRoute><Profile></Profile></PrivateRoute>
       }
     ],
   },
